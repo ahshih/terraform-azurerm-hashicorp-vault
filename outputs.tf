@@ -5,7 +5,7 @@ output "key_vault_id" {
 
 output "key_vault_uri" {
   description = "The URI of the Key Vault, used for performing operations on keys and secrets." 
-  value       = azurerm_key_vault.kv.uri
+  value       = azurerm_key_vault.kv.vault_uri
 }
 
 output "vault_init_secret_uri" {
