@@ -47,6 +47,10 @@ This module will deploy hashicorp vault into a pre-existing AKS cluster
 
 ## Outputs
 
-No output.
+| Name | Description |
+|------|-------------|
+| key\_vault\_id | The ID of the Key Vault. |
+| key\_vault\_uri | The URI of the Key Vault, used for performing operations on keys and secrets. |
+| vault\_init\_secret\_uri | The Azure Key Vault URI of the Hashicorp Vault init information. |
 <!--- END_TF_DOCS --->
 <br />
