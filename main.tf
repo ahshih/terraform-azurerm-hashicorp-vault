@@ -123,9 +123,6 @@ resource "azurerm_key_vault_access_policy" "vault_init" {
 module "vault_identity" {
   source = "github.com/Azure-Terraform/terraform-azurerm-kubernetes-aad-pod-identity?ref=v1.1.0"
 
-  identity_name        = azurerm_user_assigned_identity.vault.name
-  identity_client_id   = azurerm_user_assigned_identity.vault.client_id
-  identity_resource_id = azurerm_user_assigned_identity.vault.id
   aks_principal_id     = azurerm_user_assigned_identity.vault.principal_id
   aks_node_resource_group = var.resource_group_name
 }
@@ -133,9 +130,6 @@ module "vault_identity" {
 module "vault_init_identity" {
   source = "github.com/Azure-Terraform/terraform-azurerm-kubernetes-aad-pod-identity?ref=v1.1.0"
 
-  identity_name        = azurerm_user_assigned_identity.vault_init.name
-  identity_client_id   = azurerm_user_assigned_identity.vault_init.client_id
-  identity_resource_id = azurerm_user_assigned_identity.vault_init.id
   aks_principal_id     = azurerm_user_assigned_identity.vault.principal_id
   aks_node_resource_group = var.resource_group_name
 }
