@@ -130,7 +130,7 @@ module "vault_identity" {
 module "vault_init_identity" {
   source = "github.com/Azure-Terraform/terraform-azurerm-kubernetes-aad-pod-identity?ref=v2.0.1"
 
-  aks_identity         = azurerm_user_assigned_identity.vault.principal_id
+  aks_identity         = azurerm_user_assigned_identity.vault_init.principal_id
   aks_node_resource_group = var.resource_group_name
 }
 
